@@ -1,0 +1,11 @@
+{
+    "name": "rrzu/topsdk",
+    "description": "rrzu/topsdk php sdk",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Topsdk\\Topapi\\": "src/"
+        }
+    },
+    "require": {}
+}
