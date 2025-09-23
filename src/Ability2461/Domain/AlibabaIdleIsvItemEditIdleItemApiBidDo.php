@@ -28,6 +28,41 @@ class AlibabaIdleIsvItemEditIdleItemApiBidDo {
      **/
     public $bid_step;
 
+    /**
+        是否支持做任务免保证金（for新奥莱拍卖业务）, 0-不支持，1-支持
+     **/
+    public $support_task_for_free;
+
+    /**
+        任务列表（for新奥莱拍卖业务）
+     **/
+    public $task_list;
+
+    /**
+        周期拍信息
+     **/
+    public $cycle_vendue_data;
+
+    /**
+        抢拍价金额，单位分
+     **/
+    public $direct_buy_price;
+
+    /**
+        当前出价金额, 最高出价, 单位分
+     **/
+    public $current_bid_price;
+
+    /**
+        总出价次数
+     **/
+    public $bid_count;
+
+    /**
+        最后两分钟被出价的延迟次数
+     **/
+    public $delay_count;
+
 
     public function getBidItemId() : int{
         return $this->bid_item_id;
@@ -67,6 +102,62 @@ class AlibabaIdleIsvItemEditIdleItemApiBidDo {
 
     public function setBidStep(int $bidStep){
         $this->bid_step = $bidStep;
+    }
+
+    public function getSupportTaskForFree() : int{
+        return $this->support_task_for_free;
+    }
+
+    public function setSupportTaskForFree(int $supportTaskForFree){
+        $this->support_task_for_free = $supportTaskForFree;
+    }
+
+    public function getTaskList() : array{
+        return $this->task_list;
+    }
+
+    public function setTaskList(array $taskList){
+        $this->task_list = $taskList;
+    }
+
+    public function getCycleVendueData() : AlibabaIdleIsvItemEditIdleItemApiCycleVendueDO{
+        return $this->cycle_vendue_data;
+    }
+
+    public function setCycleVendueData(AlibabaIdleIsvItemEditIdleItemApiCycleVendueDO $cycleVendueData){
+        $this->cycle_vendue_data = $cycleVendueData;
+    }
+
+    public function getDirectBuyPrice() : int{
+        return $this->direct_buy_price;
+    }
+
+    public function setDirectBuyPrice(int $directBuyPrice){
+        $this->direct_buy_price = $directBuyPrice;
+    }
+
+    public function getCurrentBidPrice() : int{
+        return $this->current_bid_price;
+    }
+
+    public function setCurrentBidPrice(int $currentBidPrice){
+        $this->current_bid_price = $currentBidPrice;
+    }
+
+    public function getBidCount() : int{
+        return $this->bid_count;
+    }
+
+    public function setBidCount(int $bidCount){
+        $this->bid_count = $bidCount;
+    }
+
+    public function getDelayCount() : int{
+        return $this->delay_count;
+    }
+
+    public function setDelayCount(int $delayCount){
+        $this->delay_count = $delayCount;
     }
 
 

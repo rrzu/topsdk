@@ -18,6 +18,16 @@ class AlibabaIdleIsvPvQueryCpvQueryParam {
      **/
     public $channel_cat_id;
 
+    /**
+        分页页码,从1开始，如果要查询类目某个属性的属性值，支持分页查询
+     **/
+    public $page_num;
+
+    /**
+        分页大小，最大支持200，如果要查询类目某个属性的属性值，支持分页查询
+     **/
+    public $page_size;
+
 
     public function getValueId() : string{
         return $this->value_id;
@@ -41,6 +51,22 @@ class AlibabaIdleIsvPvQueryCpvQueryParam {
 
     public function setChannelCatId(string $channelCatId){
         $this->channel_cat_id = $channelCatId;
+    }
+
+    public function getPageNum() : int{
+        return $this->page_num;
+    }
+
+    public function setPageNum(int $pageNum){
+        $this->page_num = $pageNum;
+    }
+
+    public function getPageSize() : int{
+        return $this->page_size;
+    }
+
+    public function setPageSize(int $pageSize){
+        $this->page_size = $pageSize;
     }
 
 

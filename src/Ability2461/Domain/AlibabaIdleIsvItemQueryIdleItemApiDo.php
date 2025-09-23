@@ -188,6 +188,76 @@ class AlibabaIdleIsvItemQueryIdleItemApiDo {
      **/
     public $flash_sale_do;
 
+    /**
+        运费模板ID
+     **/
+    public $idle_template_id;
+
+    /**
+        sku属性图片
+     **/
+    public $property_images;
+
+    /**
+        长图信息
+     **/
+    public $long_images;
+
+    /**
+        运费模版重量
+     **/
+    public $weight;
+
+    /**
+        运费模版重量单位
+     **/
+    public $weight_unit;
+
+    /**
+        预售工具参数
+     **/
+    public $trendy_pre_sale_do;
+
+    /**
+        发布成功，编辑成功，查询场景，返回给服务商的提醒信息
+     **/
+    public $notify_message;
+
+    /**
+        捡漏类型商品成色信息
+     **/
+    public $brand_bargain;
+
+    /**
+        门店库信息
+     **/
+    public $store_group_do;
+
+    /**
+        分销商品信息
+     **/
+    public $distribution_item_info;
+
+    /**
+        抽赏信息
+     **/
+    public $trendy_chou_shang_do;
+
+    /**
+        商品租赁信息
+     **/
+    public $item_lease_do;
+
+    /**
+        秒杀商品开始时间毫秒时间戳
+     **/
+    public $sec_kill_time;
+
+    /**
+        游戏cdk充值
+     **/
+    public $x_global_code;
+
 
     public function getCategoryId() : int{
         return $this->category_id;
@@ -483,6 +553,118 @@ class AlibabaIdleIsvItemQueryIdleItemApiDo {
 
     public function setFlashSaleDo(AlibabaIdleIsvItemQueryIdleItemApiFlashSaleDO $flashSaleDo){
         $this->flash_sale_do = $flashSaleDo;
+    }
+
+    public function getIdleTemplateId() : int{
+        return $this->idle_template_id;
+    }
+
+    public function setIdleTemplateId(int $idleTemplateId){
+        $this->idle_template_id = $idleTemplateId;
+    }
+
+    public function getPropertyImages() : array{
+        return $this->property_images;
+    }
+
+    public function setPropertyImages(array $propertyImages){
+        $this->property_images = $propertyImages;
+    }
+
+    public function getLongImages() : array{
+        return $this->long_images;
+    }
+
+    public function setLongImages(array $longImages){
+        $this->long_images = $longImages;
+    }
+
+    public function getWeight() : string{
+        return $this->weight;
+    }
+
+    public function setWeight(string $weight){
+        $this->weight = $weight;
+    }
+
+    public function getWeightUnit() : string{
+        return $this->weight_unit;
+    }
+
+    public function setWeightUnit(string $weightUnit){
+        $this->weight_unit = $weightUnit;
+    }
+
+    public function getTrendyPreSaleDo() : AlibabaIdleIsvItemQueryIdleItemTrendyPreSaleDO{
+        return $this->trendy_pre_sale_do;
+    }
+
+    public function setTrendyPreSaleDo(AlibabaIdleIsvItemQueryIdleItemTrendyPreSaleDO $trendyPreSaleDo){
+        $this->trendy_pre_sale_do = $trendyPreSaleDo;
+    }
+
+    public function getNotifyMessage() : string{
+        return $this->notify_message;
+    }
+
+    public function setNotifyMessage(string $notifyMessage){
+        $this->notify_message = $notifyMessage;
+    }
+
+    public function getBrandBargain() : AlibabaIdleIsvItemQueryIdleItemApiBrandBargainDO{
+        return $this->brand_bargain;
+    }
+
+    public function setBrandBargain(AlibabaIdleIsvItemQueryIdleItemApiBrandBargainDO $brandBargain){
+        $this->brand_bargain = $brandBargain;
+    }
+
+    public function getStoreGroupDo() : AlibabaIdleIsvItemQueryIdleItemApiStoreGroupDO{
+        return $this->store_group_do;
+    }
+
+    public function setStoreGroupDo(AlibabaIdleIsvItemQueryIdleItemApiStoreGroupDO $storeGroupDo){
+        $this->store_group_do = $storeGroupDo;
+    }
+
+    public function getDistributionItemInfo() : AlibabaIdleIsvItemQueryIdleDistributionItemInfoDO{
+        return $this->distribution_item_info;
+    }
+
+    public function setDistributionItemInfo(AlibabaIdleIsvItemQueryIdleDistributionItemInfoDO $distributionItemInfo){
+        $this->distribution_item_info = $distributionItemInfo;
+    }
+
+    public function getTrendyChouShangDo() : AlibabaIdleIsvItemQueryIdleItemTrendyChouShangDO{
+        return $this->trendy_chou_shang_do;
+    }
+
+    public function setTrendyChouShangDo(AlibabaIdleIsvItemQueryIdleItemTrendyChouShangDO $trendyChouShangDo){
+        $this->trendy_chou_shang_do = $trendyChouShangDo;
+    }
+
+    public function getItemLeaseDo() : AlibabaIdleIsvItemQueryItemLeaseDO{
+        return $this->item_lease_do;
+    }
+
+    public function setItemLeaseDo(AlibabaIdleIsvItemQueryItemLeaseDO $itemLeaseDo){
+        $this->item_lease_do = $itemLeaseDo;
+    }
+
+    public function getSecKillTime() : int{
+        return $this->sec_kill_time;
+    }
+
+    public function setSecKillTime(int $secKillTime){
+        $this->sec_kill_time = $secKillTime;
+    }
+
+    public function getXGlobalCode() : string{
+        return $this->x_global_code;
+    }
+
+    public function setXGlobalCode(string $xGlobalCode){
+        $this->x_global_code = $xGlobalCode;
     }
 
 

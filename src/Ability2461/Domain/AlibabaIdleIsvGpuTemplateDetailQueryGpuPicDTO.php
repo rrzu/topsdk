@@ -1,0 +1,61 @@
+<?php
+namespace Topsdk\Topapi\Ability2461\Domain;
+
+class AlibabaIdleIsvGpuTemplateDetailQueryGpuPicDTO {
+
+    /**
+        图片url
+     **/
+    public $pic_url;
+
+    /**
+        图片宽度
+     **/
+    public $width;
+
+    /**
+        图片高度
+     **/
+    public $height;
+
+    /**
+        图片id
+     **/
+    public $pic_id;
+
+
+    public function getPicUrl() : string{
+        return $this->pic_url;
+    }
+
+    public function setPicUrl(string $picUrl){
+        $this->pic_url = $picUrl;
+    }
+
+    public function getWidth() : string{
+        return $this->width;
+    }
+
+    public function setWidth(string $width){
+        $this->width = $width;
+    }
+
+    public function getHeight() : string{
+        return $this->height;
+    }
+
+    public function setHeight(string $height){
+        $this->height = $height;
+    }
+
+    public function getPicId() : int{
+        return $this->pic_id;
+    }
+
+    public function setPicId(int $picId){
+        $this->pic_id = $picId;
+    }
+
+
+}
+

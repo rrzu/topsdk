@@ -28,6 +28,16 @@ class AlibabaIdleIsvItemQueryIdleItemApiSkuDo {
      **/
     public $outer_id;
 
+    /**
+        sku参考供货价，单位元
+     **/
+    public $supply_price;
+
+    /**
+        cspud
+     **/
+    public $cspu_id;
+
 
     public function getSkuId() : int{
         return $this->sku_id;
@@ -67,6 +77,22 @@ class AlibabaIdleIsvItemQueryIdleItemApiSkuDo {
 
     public function setOuterId(string $outerId){
         $this->outer_id = $outerId;
+    }
+
+    public function getSupplyPrice() : string{
+        return $this->supply_price;
+    }
+
+    public function setSupplyPrice(string $supplyPrice){
+        $this->supply_price = $supplyPrice;
+    }
+
+    public function getCspuId() : int{
+        return $this->cspu_id;
+    }
+
+    public function setCspuId(int $cspuId){
+        $this->cspu_id = $cspuId;
     }
 
 

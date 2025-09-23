@@ -43,6 +43,16 @@ class AlibabaIdleIsvOrderQueryIdleOrderCompensateTopSubVO {
      **/
     public $refuse_reason;
 
+    /**
+        买家申请索赔的信息
+     **/
+    public $compensate_service_create_apply_info;
+
+    /**
+        补充凭证(卖家补充信息)
+     **/
+    public $supplement_poofs;
+
 
     public function getBizOrderId() : int{
         return $this->biz_order_id;
@@ -106,6 +116,22 @@ class AlibabaIdleIsvOrderQueryIdleOrderCompensateTopSubVO {
 
     public function setRefuseReason(AlibabaIdleIsvOrderQueryIdleOrderCompensateRefuseReasonData $refuseReason){
         $this->refuse_reason = $refuseReason;
+    }
+
+    public function getCompensateServiceCreateApplyInfo() : AlibabaIdleIsvOrderQueryCompensateServiceCreateApplyInfo{
+        return $this->compensate_service_create_apply_info;
+    }
+
+    public function setCompensateServiceCreateApplyInfo(AlibabaIdleIsvOrderQueryCompensateServiceCreateApplyInfo $compensateServiceCreateApplyInfo){
+        $this->compensate_service_create_apply_info = $compensateServiceCreateApplyInfo;
+    }
+
+    public function getSupplementPoofs() : array{
+        return $this->supplement_poofs;
+    }
+
+    public function setSupplementPoofs(array $supplementPoofs){
+        $this->supplement_poofs = $supplementPoofs;
     }
 
 

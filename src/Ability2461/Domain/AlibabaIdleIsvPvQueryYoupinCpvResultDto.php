@@ -28,6 +28,11 @@ class AlibabaIdleIsvPvQueryYoupinCpvResultDto {
      **/
     public $input_word;
 
+    /**
+        加密属性id
+     **/
+    public $encode_property_id;
+
 
     public function getPropertyId() : string{
         return $this->property_id;
@@ -67,6 +72,14 @@ class AlibabaIdleIsvPvQueryYoupinCpvResultDto {
 
     public function setInputWord(string $inputWord){
         $this->input_word = $inputWord;
+    }
+
+    public function getEncodePropertyId() : string{
+        return $this->encode_property_id;
+    }
+
+    public function setEncodePropertyId(string $encodePropertyId){
+        $this->encode_property_id = $encodePropertyId;
     }
 
 

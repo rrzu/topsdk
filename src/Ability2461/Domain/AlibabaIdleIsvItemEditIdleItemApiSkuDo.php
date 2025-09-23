@@ -28,6 +28,11 @@ class AlibabaIdleIsvItemEditIdleItemApiSkuDo {
      **/
     public $outer_id;
 
+    /**
+        cspuId
+     **/
+    public $cspu_id;
+
 
     public function getSkuId() : int{
         return $this->sku_id;
@@ -67,6 +72,14 @@ class AlibabaIdleIsvItemEditIdleItemApiSkuDo {
 
     public function setOuterId(string $outerId){
         $this->outer_id = $outerId;
+    }
+
+    public function getCspuId() : int{
+        return $this->cspu_id;
+    }
+
+    public function setCspuId(int $cspuId){
+        $this->cspu_id = $cspuId;
     }
 
 

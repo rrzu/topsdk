@@ -118,6 +118,86 @@ class AlibabaIdleIsvOrderQueryIdleOrderQueryTopVO {
      **/
     public $og_id;
 
+    /**
+        需要屏蔽的操作（ORDER_CLOSE : 关单，ADJUST_PRICE : 改价）
+     **/
+    public $forbid_actions;
+
+    /**
+        所有优惠关联订单
+     **/
+    public $prom_related_order_ids;
+
+    /**
+        发车订单信息
+     **/
+    public $fa_che_order;
+
+    /**
+        关单类型
+     **/
+    public $close_reason;
+
+    /**
+        退款类型
+     **/
+    public $refund_status;
+
+    /**
+        预售订单信息
+     **/
+    public $pre_sale_order;
+
+    /**
+        订单类型
+     **/
+    public $idle_biz_code;
+
+    /**
+        虚拟流量号卡信息
+     **/
+    public $virtual_flow_card;
+
+    /**
+        二次元抽赏订单信息
+     **/
+    public $chou_shang_order;
+
+    /**
+        邮费单逆向信息
+     **/
+    public $postage_compensate_list;
+
+    /**
+        二次元抽赏邮费订单信息
+     **/
+    public $chou_shang_post_order;
+
+    /**
+        闲鱼币抵扣信息
+     **/
+    public $idle_coin_deduction_order;
+
+    /**
+        软件服务费,单位是分
+     **/
+    public $software_fee;
+
+    /**
+        游戏代练订单
+     **/
+    public $game_boosting_order;
+
+    /**
+        租赁订单信息
+     **/
+    public $lease_info;
+
+    /**
+        严选复验订单额外信息
+     **/
+    public $selected_re_verify_order;
+
 
     public function getBizOrderId() : int{
         return $this->biz_order_id;
@@ -301,6 +381,134 @@ class AlibabaIdleIsvOrderQueryIdleOrderQueryTopVO {
 
     public function setOgId(string $ogId){
         $this->og_id = $ogId;
+    }
+
+    public function getForbidActions() : array{
+        return $this->forbid_actions;
+    }
+
+    public function setForbidActions(array $forbidActions){
+        $this->forbid_actions = $forbidActions;
+    }
+
+    public function getPromRelatedOrderIds() : string{
+        return $this->prom_related_order_ids;
+    }
+
+    public function setPromRelatedOrderIds(string $promRelatedOrderIds){
+        $this->prom_related_order_ids = $promRelatedOrderIds;
+    }
+
+    public function getFaCheOrder() : AlibabaIdleIsvOrderQueryIdleTrendyFaCheOrderVO{
+        return $this->fa_che_order;
+    }
+
+    public function setFaCheOrder(AlibabaIdleIsvOrderQueryIdleTrendyFaCheOrderVO $faCheOrder){
+        $this->fa_che_order = $faCheOrder;
+    }
+
+    public function getCloseReason() : string{
+        return $this->close_reason;
+    }
+
+    public function setCloseReason(string $closeReason){
+        $this->close_reason = $closeReason;
+    }
+
+    public function getRefundStatus() : string{
+        return $this->refund_status;
+    }
+
+    public function setRefundStatus(string $refundStatus){
+        $this->refund_status = $refundStatus;
+    }
+
+    public function getPreSaleOrder() : AlibabaIdleIsvOrderQueryIdleTrendyPreSaleOrderVO{
+        return $this->pre_sale_order;
+    }
+
+    public function setPreSaleOrder(AlibabaIdleIsvOrderQueryIdleTrendyPreSaleOrderVO $preSaleOrder){
+        $this->pre_sale_order = $preSaleOrder;
+    }
+
+    public function getIdleBizCode() : string{
+        return $this->idle_biz_code;
+    }
+
+    public function setIdleBizCode(string $idleBizCode){
+        $this->idle_biz_code = $idleBizCode;
+    }
+
+    public function getVirtualFlowCard() : AlibabaIdleIsvOrderQueryIdleTrendyVirtualFlowCardVO{
+        return $this->virtual_flow_card;
+    }
+
+    public function setVirtualFlowCard(AlibabaIdleIsvOrderQueryIdleTrendyVirtualFlowCardVO $virtualFlowCard){
+        $this->virtual_flow_card = $virtualFlowCard;
+    }
+
+    public function getChouShangOrder() : AlibabaIdleIsvOrderQueryIdleTrendyChouShangOrderVO{
+        return $this->chou_shang_order;
+    }
+
+    public function setChouShangOrder(AlibabaIdleIsvOrderQueryIdleTrendyChouShangOrderVO $chouShangOrder){
+        $this->chou_shang_order = $chouShangOrder;
+    }
+
+    public function getPostageCompensateList() : array{
+        return $this->postage_compensate_list;
+    }
+
+    public function setPostageCompensateList(array $postageCompensateList){
+        $this->postage_compensate_list = $postageCompensateList;
+    }
+
+    public function getChouShangPostOrder() : AlibabaIdleIsvOrderQueryIdleTrendyChouShangPostOrderVO{
+        return $this->chou_shang_post_order;
+    }
+
+    public function setChouShangPostOrder(AlibabaIdleIsvOrderQueryIdleTrendyChouShangPostOrderVO $chouShangPostOrder){
+        $this->chou_shang_post_order = $chouShangPostOrder;
+    }
+
+    public function getIdleCoinDeductionOrder() : AlibabaIdleIsvOrderQueryIdleCoinDeductionOrderVO{
+        return $this->idle_coin_deduction_order;
+    }
+
+    public function setIdleCoinDeductionOrder(AlibabaIdleIsvOrderQueryIdleCoinDeductionOrderVO $idleCoinDeductionOrder){
+        $this->idle_coin_deduction_order = $idleCoinDeductionOrder;
+    }
+
+    public function getSoftwareFee() : string{
+        return $this->software_fee;
+    }
+
+    public function setSoftwareFee(string $softwareFee){
+        $this->software_fee = $softwareFee;
+    }
+
+    public function getGameBoostingOrder() : AlibabaIdleIsvOrderQueryIdleTrendyGameBoostingOrderVO{
+        return $this->game_boosting_order;
+    }
+
+    public function setGameBoostingOrder(AlibabaIdleIsvOrderQueryIdleTrendyGameBoostingOrderVO $gameBoostingOrder){
+        $this->game_boosting_order = $gameBoostingOrder;
+    }
+
+    public function getLeaseInfo() : AlibabaIdleIsvOrderQueryIdleLeaseOrderVO{
+        return $this->lease_info;
+    }
+
+    public function setLeaseInfo(AlibabaIdleIsvOrderQueryIdleLeaseOrderVO $leaseInfo){
+        $this->lease_info = $leaseInfo;
+    }
+
+    public function getSelectedReVerifyOrder() : AlibabaIdleIsvOrderQueryIdleSelectedReVerifyOrderVO{
+        return $this->selected_re_verify_order;
+    }
+
+    public function setSelectedReVerifyOrder(AlibabaIdleIsvOrderQueryIdleSelectedReVerifyOrderVO $selectedReVerifyOrder){
+        $this->selected_re_verify_order = $selectedReVerifyOrder;
     }
 
 

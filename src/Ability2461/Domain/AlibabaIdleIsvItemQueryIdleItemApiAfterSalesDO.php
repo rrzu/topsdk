@@ -28,6 +28,21 @@ class AlibabaIdleIsvItemQueryIdleItemApiAfterSalesDO {
      **/
     public $support_fd10ms_policy;
 
+    /**
+        是否支持 极速发货-48小时
+     **/
+    public $support_fd48hs_policy;
+
+    /**
+        是否支持 假货包赔
+     **/
+    public $support_gpa_policy;
+
+    /**
+        是否支持 不符必赔
+     **/
+    public $support_nfgc_policy;
+
 
     public function getSupportSdrPolicy() : bool{
         return $this->support_sdr_policy;
@@ -67,6 +82,30 @@ class AlibabaIdleIsvItemQueryIdleItemApiAfterSalesDO {
 
     public function setSupportFd10msPolicy(bool $supportFd10msPolicy){
         $this->support_fd10ms_policy = $supportFd10msPolicy;
+    }
+
+    public function getSupportFd48hsPolicy() : bool{
+        return $this->support_fd48hs_policy;
+    }
+
+    public function setSupportFd48hsPolicy(bool $supportFd48hsPolicy){
+        $this->support_fd48hs_policy = $supportFd48hsPolicy;
+    }
+
+    public function getSupportGpaPolicy() : bool{
+        return $this->support_gpa_policy;
+    }
+
+    public function setSupportGpaPolicy(bool $supportGpaPolicy){
+        $this->support_gpa_policy = $supportGpaPolicy;
+    }
+
+    public function getSupportNfgcPolicy() : bool{
+        return $this->support_nfgc_policy;
+    }
+
+    public function setSupportNfgcPolicy(bool $supportNfgcPolicy){
+        $this->support_nfgc_policy = $supportNfgcPolicy;
     }
 
 

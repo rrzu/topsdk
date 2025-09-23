@@ -18,6 +18,11 @@ class AlibabaIdleIsvItemEditIdleItemApiFlashSaleDO {
      **/
     public $food_expire_date;
 
+    /**
+        是否自动上架
+     **/
+    public $auto_up_shelf;
+
 
     public function getTag() : int{
         return $this->tag;
@@ -41,6 +46,14 @@ class AlibabaIdleIsvItemEditIdleItemApiFlashSaleDO {
 
     public function setFoodExpireDate(string $foodExpireDate){
         $this->food_expire_date = $foodExpireDate;
+    }
+
+    public function getAutoUpShelf() : bool{
+        return $this->auto_up_shelf;
+    }
+
+    public function setAutoUpShelf(bool $autoUpShelf){
+        $this->auto_up_shelf = $autoUpShelf;
     }
 
 

@@ -6,12 +6,12 @@ use Topsdk\Topapi\Ability304\Request\TaobaoAppipGetRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoFilesGetRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoTopAuthTokenRefreshRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoTopAuthTokenCreateRequest;
+use Topsdk\Topapi\Ability304\Request\TaobaoHttpdnsGetRequest;
+use Topsdk\Topapi\Ability304\Request\TaobaoTopSdkFeedbackUploadRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoOpenuidGetRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoOpenuidGetBytradeRequest;
-use Topsdk\Topapi\Ability304\Request\TaobaoHttpdnsGetRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoTopSecretGetRequest;
 use Topsdk\Topapi\Ability304\Request\TaobaoOpenuidGetBymixnickRequest;
-use Topsdk\Topapi\Ability304\Request\TaobaoTopSdkFeedbackUploadRequest;
 
 class Ability304 {
 
@@ -47,6 +47,18 @@ class Ability304 {
         return $this->client->execute("taobao.top.auth.token.create", $request->toMap(), $request->toFileParamMap());
     }
     /**
+        TOPDNS配置
+    **/
+    public function taobaoHttpdnsGet(TaobaoHttpdnsGetRequest $request) {
+        return $this->client->execute("taobao.httpdns.get", $request->toMap(), $request->toFileParamMap());
+    }
+    /**
+        sdk信息回调
+    **/
+    public function taobaoTopSdkFeedbackUpload(TaobaoTopSdkFeedbackUploadRequest $request) {
+        return $this->client->execute("taobao.top.sdk.feedback.upload", $request->toMap(), $request->toFileParamMap());
+    }
+    /**
         获取授权账号对应的OpenUid
     **/
     public function taobaoOpenuidGet(TaobaoOpenuidGetRequest $request,string $session) {
@@ -59,12 +71,6 @@ class Ability304 {
         return $this->client->executeWithSession("taobao.openuid.get.bytrade", $request->toMap(), $request->toFileParamMap(), $session);
     }
     /**
-        TOPDNS配置
-    **/
-    public function taobaoHttpdnsGet(TaobaoHttpdnsGetRequest $request) {
-        return $this->client->execute("taobao.httpdns.get", $request->toMap(), $request->toFileParamMap());
-    }
-    /**
         获取TOP通道解密秘钥
     **/
     public function taobaoTopSecretGet(TaobaoTopSecretGetRequest $request,string $session) {
@@ -75,11 +81,5 @@ class Ability304 {
     **/
     public function taobaoOpenuidGetBymixnick(TaobaoOpenuidGetBymixnickRequest $request) {
         return $this->client->execute("taobao.openuid.get.bymixnick", $request->toMap(), $request->toFileParamMap());
-    }
-    /**
-        sdk信息回调
-    **/
-    public function taobaoTopSdkFeedbackUpload(TaobaoTopSdkFeedbackUploadRequest $request) {
-        return $this->client->execute("taobao.top.sdk.feedback.upload", $request->toMap(), $request->toFileParamMap());
     }
 }

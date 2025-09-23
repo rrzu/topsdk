@@ -128,6 +128,16 @@ class AlibabaIdleIsvRefundQueryAppraiseIsvRefundDto {
      **/
     public $encryption_seller_id;
 
+    /**
+        关联淘宝退款订单状态
+     **/
+    public $tb_refund_status;
+
+    /**
+        是否与淘宝订单一致
+     **/
+    public $tb_order_consistent;
+
 
     public function getBizOrderId() : int{
         return $this->biz_order_id;
@@ -327,6 +337,22 @@ class AlibabaIdleIsvRefundQueryAppraiseIsvRefundDto {
 
     public function setEncryptionSellerId(string $encryptionSellerId){
         $this->encryption_seller_id = $encryptionSellerId;
+    }
+
+    public function getTbRefundStatus() : int{
+        return $this->tb_refund_status;
+    }
+
+    public function setTbRefundStatus(int $tbRefundStatus){
+        $this->tb_refund_status = $tbRefundStatus;
+    }
+
+    public function getTbOrderConsistent() : bool{
+        return $this->tb_order_consistent;
+    }
+
+    public function setTbOrderConsistent(bool $tbOrderConsistent){
+        $this->tb_order_consistent = $tbOrderConsistent;
     }
 
 

@@ -13,6 +13,11 @@ class AlibabaIdleIsvOrderQueryIdleOrderCompensateRefuseReasonData {
      **/
     public $reason_desc;
 
+    /**
+        拒绝原因凭证
+     **/
+    public $refuse_proofs;
+
 
     public function getReasonChoices() : array{
         return $this->reason_choices;
@@ -28,6 +33,14 @@ class AlibabaIdleIsvOrderQueryIdleOrderCompensateRefuseReasonData {
 
     public function setReasonDesc(string $reasonDesc){
         $this->reason_desc = $reasonDesc;
+    }
+
+    public function getRefuseProofs() : array{
+        return $this->refuse_proofs;
+    }
+
+    public function setRefuseProofs(array $refuseProofs){
+        $this->refuse_proofs = $refuseProofs;
     }
 
 

@@ -48,6 +48,11 @@ class AlibabaIdleIsvOrderDealrefundShippingAddressInfo {
      **/
     public $town;
 
+    /**
+        区域id
+     **/
+    public $division_code;
+
 
     public function getAddressDetail() : string{
         return $this->address_detail;
@@ -119,6 +124,14 @@ class AlibabaIdleIsvOrderDealrefundShippingAddressInfo {
 
     public function setTown(string $town){
         $this->town = $town;
+    }
+
+    public function getDivisionCode() : string{
+        return $this->division_code;
+    }
+
+    public function setDivisionCode(string $divisionCode){
+        $this->division_code = $divisionCode;
     }
 
 

@@ -28,6 +28,21 @@ class AlibabaIdleIsvOrderQueryIsvQueryOrderDataQry {
      **/
     public $show_virtual_delivery_info;
 
+    /**
+        是否需要查询服务赔付履约信息-48小时发货【请谨慎打开，会影响接口RT】
+     **/
+    public $show_fd48hs;
+
+    /**
+        是否需要查询服务赔付履约信息-假货包赔【请谨慎打开，会影响接口RT】
+     **/
+    public $show_gpa;
+
+    /**
+        是否需要查询服务赔付履约信息-描述不符包邮退【请谨慎打开，会影响接口RT】
+     **/
+    public $show_nfr;
+
 
     public function getBizOrderId() : int{
         return $this->biz_order_id;
@@ -67,6 +82,30 @@ class AlibabaIdleIsvOrderQueryIsvQueryOrderDataQry {
 
     public function setShowVirtualDeliveryInfo(bool $showVirtualDeliveryInfo){
         $this->show_virtual_delivery_info = $showVirtualDeliveryInfo;
+    }
+
+    public function getShowFd48hs() : bool{
+        return $this->show_fd48hs;
+    }
+
+    public function setShowFd48hs(bool $showFd48hs){
+        $this->show_fd48hs = $showFd48hs;
+    }
+
+    public function getShowGpa() : bool{
+        return $this->show_gpa;
+    }
+
+    public function setShowGpa(bool $showGpa){
+        $this->show_gpa = $showGpa;
+    }
+
+    public function getShowNfr() : bool{
+        return $this->show_nfr;
+    }
+
+    public function setShowNfr(bool $showNfr){
+        $this->show_nfr = $showNfr;
     }
 
 

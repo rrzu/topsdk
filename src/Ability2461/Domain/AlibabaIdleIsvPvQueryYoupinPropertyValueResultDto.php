@@ -13,6 +13,11 @@ class AlibabaIdleIsvPvQueryYoupinPropertyValueResultDto {
      **/
     public $value_name;
 
+    /**
+        加密的属性值id
+     **/
+    public $encode_value_id;
+
 
     public function getValueId() : string{
         return $this->value_id;
@@ -28,6 +33,14 @@ class AlibabaIdleIsvPvQueryYoupinPropertyValueResultDto {
 
     public function setValueName(string $valueName){
         $this->value_name = $valueName;
+    }
+
+    public function getEncodeValueId() : string{
+        return $this->encode_value_id;
+    }
+
+    public function setEncodeValueId(string $encodeValueId){
+        $this->encode_value_id = $encodeValueId;
     }
 
 

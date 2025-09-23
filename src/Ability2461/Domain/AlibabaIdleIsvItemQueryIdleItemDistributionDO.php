@@ -18,6 +18,11 @@ class AlibabaIdleIsvItemQueryIdleItemDistributionDO {
      **/
     public $inv_grade;
 
+    /**
+        商品来源类型
+     **/
+    public $market_site;
+
 
     public function getProductPrice() : string{
         return $this->product_price;
@@ -41,6 +46,14 @@ class AlibabaIdleIsvItemQueryIdleItemDistributionDO {
 
     public function setInvGrade(string $invGrade){
         $this->inv_grade = $invGrade;
+    }
+
+    public function getMarketSite() : string{
+        return $this->market_site;
+    }
+
+    public function setMarketSite(string $marketSite){
+        $this->market_site = $marketSite;
     }
 
 

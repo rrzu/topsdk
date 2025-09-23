@@ -18,6 +18,26 @@ class AlibabaIdleIsvItemPublishIdleItemApiInspectedDo {
      **/
     public $ware_house_time;
 
+    /**
+        验货报告ID
+     **/
+    public $inspect_report_id;
+
+    /**
+        暗拍价
+     **/
+    public $secret_auction_price;
+
+    /**
+        一口价
+     **/
+    public $fixed_price;
+
+    /**
+        货源类型，RECYCLE（回收）, OTHER（其他，服务商自有）
+     **/
+    public $source_type;
+
 
     public function getInspectReport() : string{
         return $this->inspect_report;
@@ -41,6 +61,38 @@ class AlibabaIdleIsvItemPublishIdleItemApiInspectedDo {
 
     public function setWareHouseTime(int $wareHouseTime){
         $this->ware_house_time = $wareHouseTime;
+    }
+
+    public function getInspectReportId() : string{
+        return $this->inspect_report_id;
+    }
+
+    public function setInspectReportId(string $inspectReportId){
+        $this->inspect_report_id = $inspectReportId;
+    }
+
+    public function getSecretAuctionPrice() : int{
+        return $this->secret_auction_price;
+    }
+
+    public function setSecretAuctionPrice(int $secretAuctionPrice){
+        $this->secret_auction_price = $secretAuctionPrice;
+    }
+
+    public function getFixedPrice() : int{
+        return $this->fixed_price;
+    }
+
+    public function setFixedPrice(int $fixedPrice){
+        $this->fixed_price = $fixedPrice;
+    }
+
+    public function getSourceType() : string{
+        return $this->source_type;
+    }
+
+    public function setSourceType(string $sourceType){
+        $this->source_type = $sourceType;
     }
 
 

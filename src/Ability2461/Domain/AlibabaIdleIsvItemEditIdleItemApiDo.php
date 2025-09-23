@@ -143,6 +143,126 @@ class AlibabaIdleIsvItemEditIdleItemApiDo {
      **/
     public $flash_sale_do;
 
+    /**
+        运费模板ID
+     **/
+    public $idle_template_id;
+
+    /**
+        长图信息
+     **/
+    public $long_images;
+
+    /**
+        sku属性图片信息
+     **/
+    public $property_images;
+
+    /**
+        商品捡漏信息
+     **/
+    public $brand_bargain;
+
+    /**
+        重量
+     **/
+    public $weight;
+
+    /**
+        重量单位，目前支持千克(kg)
+     **/
+    public $weight_unit;
+
+    /**
+        预售工具参数
+     **/
+    public $trendy_pre_sale_do;
+
+    /**
+        门店库参数
+     **/
+    public $store_group_do;
+
+    /**
+        招商活动信息
+     **/
+    public $merchant_data_do;
+
+    /**
+        分销商品信息
+     **/
+    public $distribution_item_info;
+
+    /**
+        是否跳过举手B卖身份校验
+     **/
+    public $skip_check_raise_b;
+
+    /**
+        定时秒杀时间戳
+     **/
+    public $sec_kill_time;
+
+    /**
+        租赁套餐信息
+     **/
+    public $item_lease_do;
+
+    /**
+        商品业务类型 0 已验货不入仓，1 已验货入仓，2 普通商品
+     **/
+    public $item_biz_type;
+
+    /**
+        图片链接
+     **/
+    public $img_urls;
+
+    /**
+        验货报告url链接(长度<=300)
+     **/
+    public $inspect_report;
+
+    /**
+        服务商商品业务分类，手机:1, 潮品:2, 家电:3, 乐器:8, 3C数码:9, 奢品:16, 母婴:17, 美妆:18, 文玩/珠宝:19, 潮玩:20, 家居:21
+     **/
+    public $sp_biz_type;
+
+    /**
+        商品状态，可选值为0（表示在线），1（表示售出下架）-2（表示下架），-1（表示删除），99（其他）
+     **/
+    public $status;
+
+    /**
+        交易方式, 仅在线交易: 0,仅线下交易: 1,线上OR线下交易: 2（int型，1位）
+     **/
+    public $trade_type;
+
+    /**
+        入仓城市，不可修改
+     **/
+    public $ware_house_city;
+
+    /**
+        入仓时间，时间戳秒，不可修改
+     **/
+    public $ware_house_time;
+
+    /**
+        商品业务标签，不可修改
+     **/
+    public $item_tags;
+
+    /**
+        商品白底图
+     **/
+    public $white_bg_img_urls;
+
+    /**
+        发布成功，编辑成功，查询场景，返回给服务商的提醒信息
+     **/
+    public $notify_message;
+
 
     public function getDesc() : string{
         return $this->desc;
@@ -366,6 +486,198 @@ class AlibabaIdleIsvItemEditIdleItemApiDo {
 
     public function setFlashSaleDo(AlibabaIdleIsvItemEditIdleItemApiFlashSaleDO $flashSaleDo){
         $this->flash_sale_do = $flashSaleDo;
+    }
+
+    public function getIdleTemplateId() : int{
+        return $this->idle_template_id;
+    }
+
+    public function setIdleTemplateId(int $idleTemplateId){
+        $this->idle_template_id = $idleTemplateId;
+    }
+
+    public function getLongImages() : array{
+        return $this->long_images;
+    }
+
+    public function setLongImages(array $longImages){
+        $this->long_images = $longImages;
+    }
+
+    public function getPropertyImages() : array{
+        return $this->property_images;
+    }
+
+    public function setPropertyImages(array $propertyImages){
+        $this->property_images = $propertyImages;
+    }
+
+    public function getBrandBargain() : AlibabaIdleIsvItemEditIdleItemApiBrandBargainDO{
+        return $this->brand_bargain;
+    }
+
+    public function setBrandBargain(AlibabaIdleIsvItemEditIdleItemApiBrandBargainDO $brandBargain){
+        $this->brand_bargain = $brandBargain;
+    }
+
+    public function getWeight() : string{
+        return $this->weight;
+    }
+
+    public function setWeight(string $weight){
+        $this->weight = $weight;
+    }
+
+    public function getWeightUnit() : string{
+        return $this->weight_unit;
+    }
+
+    public function setWeightUnit(string $weightUnit){
+        $this->weight_unit = $weightUnit;
+    }
+
+    public function getTrendyPreSaleDo() : AlibabaIdleIsvItemEditIdleItemTrendyPreSaleDO{
+        return $this->trendy_pre_sale_do;
+    }
+
+    public function setTrendyPreSaleDo(AlibabaIdleIsvItemEditIdleItemTrendyPreSaleDO $trendyPreSaleDo){
+        $this->trendy_pre_sale_do = $trendyPreSaleDo;
+    }
+
+    public function getStoreGroupDo() : AlibabaIdleIsvItemEditIdleItemApiStoreGroupDO{
+        return $this->store_group_do;
+    }
+
+    public function setStoreGroupDo(AlibabaIdleIsvItemEditIdleItemApiStoreGroupDO $storeGroupDo){
+        $this->store_group_do = $storeGroupDo;
+    }
+
+    public function getMerchantDataDo() : AlibabaIdleIsvItemEditIdleItemMerchantDataDO{
+        return $this->merchant_data_do;
+    }
+
+    public function setMerchantDataDo(AlibabaIdleIsvItemEditIdleItemMerchantDataDO $merchantDataDo){
+        $this->merchant_data_do = $merchantDataDo;
+    }
+
+    public function getDistributionItemInfo() : AlibabaIdleIsvItemEditIdleDistributionItemInfoDO{
+        return $this->distribution_item_info;
+    }
+
+    public function setDistributionItemInfo(AlibabaIdleIsvItemEditIdleDistributionItemInfoDO $distributionItemInfo){
+        $this->distribution_item_info = $distributionItemInfo;
+    }
+
+    public function getSkipCheckRaiseB() : bool{
+        return $this->skip_check_raise_b;
+    }
+
+    public function setSkipCheckRaiseB(bool $skipCheckRaiseB){
+        $this->skip_check_raise_b = $skipCheckRaiseB;
+    }
+
+    public function getSecKillTime() : int{
+        return $this->sec_kill_time;
+    }
+
+    public function setSecKillTime(int $secKillTime){
+        $this->sec_kill_time = $secKillTime;
+    }
+
+    public function getItemLeaseDo() : AlibabaIdleIsvItemEditItemLeaseDO{
+        return $this->item_lease_do;
+    }
+
+    public function setItemLeaseDo(AlibabaIdleIsvItemEditItemLeaseDO $itemLeaseDo){
+        $this->item_lease_do = $itemLeaseDo;
+    }
+
+    public function getItemBizType() : int{
+        return $this->item_biz_type;
+    }
+
+    public function setItemBizType(int $itemBizType){
+        $this->item_biz_type = $itemBizType;
+    }
+
+    public function getImgUrls() : array{
+        return $this->img_urls;
+    }
+
+    public function setImgUrls(array $imgUrls){
+        $this->img_urls = $imgUrls;
+    }
+
+    public function getInspectReport() : string{
+        return $this->inspect_report;
+    }
+
+    public function setInspectReport(string $inspectReport){
+        $this->inspect_report = $inspectReport;
+    }
+
+    public function getSpBizType() : string{
+        return $this->sp_biz_type;
+    }
+
+    public function setSpBizType(string $spBizType){
+        $this->sp_biz_type = $spBizType;
+    }
+
+    public function getStatus() : int{
+        return $this->status;
+    }
+
+    public function setStatus(int $status){
+        $this->status = $status;
+    }
+
+    public function getTradeType() : int{
+        return $this->trade_type;
+    }
+
+    public function setTradeType(int $tradeType){
+        $this->trade_type = $tradeType;
+    }
+
+    public function getWareHouseCity() : string{
+        return $this->ware_house_city;
+    }
+
+    public function setWareHouseCity(string $wareHouseCity){
+        $this->ware_house_city = $wareHouseCity;
+    }
+
+    public function getWareHouseTime() : int{
+        return $this->ware_house_time;
+    }
+
+    public function setWareHouseTime(int $wareHouseTime){
+        $this->ware_house_time = $wareHouseTime;
+    }
+
+    public function getItemTags() : array{
+        return $this->item_tags;
+    }
+
+    public function setItemTags(array $itemTags){
+        $this->item_tags = $itemTags;
+    }
+
+    public function getWhiteBgImgUrls() : array{
+        return $this->white_bg_img_urls;
+    }
+
+    public function setWhiteBgImgUrls(array $whiteBgImgUrls){
+        $this->white_bg_img_urls = $whiteBgImgUrls;
+    }
+
+    public function getNotifyMessage() : string{
+        return $this->notify_message;
+    }
+
+    public function setNotifyMessage(string $notifyMessage){
+        $this->notify_message = $notifyMessage;
     }
 
 

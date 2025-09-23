@@ -43,6 +43,26 @@ class AlibabaIdleIsvItemQueryIdleItemApiBidDo {
      **/
     public $delay_count;
 
+    /**
+        是否支持做任务免保证金（for新奥莱拍卖业务）, 0-不支持，1-支持
+     **/
+    public $support_task_for_free;
+
+    /**
+        任务列表（for新奥莱拍卖业务）
+     **/
+    public $task_list;
+
+    /**
+        周期拍信息
+     **/
+    public $cycle_vendue_data;
+
+    /**
+        抢拍价金额，单位分
+     **/
+    public $direct_buy_price;
+
 
     public function getBidItemId() : int{
         return $this->bid_item_id;
@@ -106,6 +126,38 @@ class AlibabaIdleIsvItemQueryIdleItemApiBidDo {
 
     public function setDelayCount(int $delayCount){
         $this->delay_count = $delayCount;
+    }
+
+    public function getSupportTaskForFree() : int{
+        return $this->support_task_for_free;
+    }
+
+    public function setSupportTaskForFree(int $supportTaskForFree){
+        $this->support_task_for_free = $supportTaskForFree;
+    }
+
+    public function getTaskList() : array{
+        return $this->task_list;
+    }
+
+    public function setTaskList(array $taskList){
+        $this->task_list = $taskList;
+    }
+
+    public function getCycleVendueData() : AlibabaIdleIsvItemQueryIdleItemApiCycleVendueDO{
+        return $this->cycle_vendue_data;
+    }
+
+    public function setCycleVendueData(AlibabaIdleIsvItemQueryIdleItemApiCycleVendueDO $cycleVendueData){
+        $this->cycle_vendue_data = $cycleVendueData;
+    }
+
+    public function getDirectBuyPrice() : int{
+        return $this->direct_buy_price;
+    }
+
+    public function setDirectBuyPrice(int $directBuyPrice){
+        $this->direct_buy_price = $directBuyPrice;
     }
 
 

@@ -78,6 +78,11 @@ class AlibabaIdleIsvServicerateBizqueryIdleRateDataTopVO {
      **/
     public $rate_time;
 
+    /**
+        评价问卷信息
+     **/
+    public $uone_data;
+
 
     public function getId() : int{
         return $this->id;
@@ -197,6 +202,14 @@ class AlibabaIdleIsvServicerateBizqueryIdleRateDataTopVO {
 
     public function setRateTime(int $rateTime){
         $this->rate_time = $rateTime;
+    }
+
+    public function getUoneData() : string{
+        return $this->uone_data;
+    }
+
+    public function setUoneData(string $uoneData){
+        $this->uone_data = $uoneData;
     }
 
 

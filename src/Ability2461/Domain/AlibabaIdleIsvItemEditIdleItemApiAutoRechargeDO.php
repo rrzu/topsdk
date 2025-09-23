@@ -18,6 +18,11 @@ class AlibabaIdleIsvItemEditIdleItemApiAutoRechargeDO {
      **/
     public $action;
 
+    /**
+        当前服务商是否拥有直充编辑权限
+     **/
+    public $owner;
+
 
     public function getTemplateCode() : string{
         return $this->template_code;
@@ -41,6 +46,14 @@ class AlibabaIdleIsvItemEditIdleItemApiAutoRechargeDO {
 
     public function setAction(string $action){
         $this->action = $action;
+    }
+
+    public function getOwner() : bool{
+        return $this->owner;
+    }
+
+    public function setOwner(bool $owner){
+        $this->owner = $owner;
     }
 
 

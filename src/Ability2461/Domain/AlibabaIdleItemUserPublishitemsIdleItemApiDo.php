@@ -93,6 +93,11 @@ class AlibabaIdleItemUserPublishitemsIdleItemApiDo {
      **/
     public $idle_item_api_auto_recharge_do;
 
+    /**
+        玩法类型
+     **/
+    public $x_global_code;
+
 
     public function getItemId() : int{
         return $this->item_id;
@@ -236,6 +241,14 @@ class AlibabaIdleItemUserPublishitemsIdleItemApiDo {
 
     public function setIdleItemApiAutoRechargeDo(AlibabaIdleItemUserPublishitemsIdleItemApiAutoRechargeDO $idleItemApiAutoRechargeDo){
         $this->idle_item_api_auto_recharge_do = $idleItemApiAutoRechargeDo;
+    }
+
+    public function getXGlobalCode() : string{
+        return $this->x_global_code;
+    }
+
+    public function setXGlobalCode(string $xGlobalCode){
+        $this->x_global_code = $xGlobalCode;
     }
 
 

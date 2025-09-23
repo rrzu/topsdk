@@ -23,6 +23,16 @@ class AlibabaIdleIsvOrderQueryIdleOrderItemTopSubVO {
      **/
     public $title;
 
+    /**
+        商品外部编码（SPU维度）
+     **/
+    public $outer_id_spu;
+
+    /**
+        商品外部编码（SKU维度）
+     **/
+    public $outer_id_sku;
+
 
     public function getItemId() : int{
         return $this->item_id;
@@ -54,6 +64,22 @@ class AlibabaIdleIsvOrderQueryIdleOrderItemTopSubVO {
 
     public function setTitle(string $title){
         $this->title = $title;
+    }
+
+    public function getOuterIdSpu() : string{
+        return $this->outer_id_spu;
+    }
+
+    public function setOuterIdSpu(string $outerIdSpu){
+        $this->outer_id_spu = $outerIdSpu;
+    }
+
+    public function getOuterIdSku() : string{
+        return $this->outer_id_sku;
+    }
+
+    public function setOuterIdSku(string $outerIdSku){
+        $this->outer_id_sku = $outerIdSku;
     }
 
 
