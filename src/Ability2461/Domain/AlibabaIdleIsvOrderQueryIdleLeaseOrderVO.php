@@ -48,6 +48,11 @@ class AlibabaIdleIsvOrderQueryIdleLeaseOrderVO {
      **/
     public $free_pledge_query_out_id;
 
+    /**
+        租三免一订单，1代表是
+     **/
+    public $act_tag;
+
 
     public function getLeaseStartTime() : int{
         return $this->lease_start_time;
@@ -121,6 +126,12 @@ class AlibabaIdleIsvOrderQueryIdleLeaseOrderVO {
         $this->free_pledge_query_out_id = $freePledgeQueryOutId;
     }
 
+    public function getActTag() : string{
+        return $this->act_tag;
+    }
 
+    public function setActTag(string $actTag){
+        $this->act_tag = $actTag;
+    }
 }
 

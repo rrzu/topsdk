@@ -34,6 +34,12 @@ class AlibabaIdleIsvItemPublishItemLeaseDO {
     public $price_cent;
 
 
+    /**
+        是否开启租3免1
+     **/
+    public $open_r3f1;
+
+
     public function getRentalDepositPriceInCent() : int{
         return $this->rental_deposit_price_in_cent;
     }
@@ -82,6 +88,12 @@ class AlibabaIdleIsvItemPublishItemLeaseDO {
         $this->price_cent = $priceCent;
     }
 
+    public function getOpenR3f1() : bool{
+        return $this->open_r3f1;
+    }
 
+    public function setOpenR3f1(bool $openR3f1){
+        $this->open_r3f1 = $openR3f1;
+    }
 }
 
