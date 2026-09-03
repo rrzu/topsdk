@@ -35,6 +35,7 @@ use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvOrderBuyerRefundRequest;
 use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvLeaseSellerAddressQueryRequest;
 use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvLeaseSellerAddressAddRequest;
 use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvLeaseOrderAdjustpriceRequest;
+use Topsdk\Topapi\Defaultability\Request\AlibabaIdleTradeIsvRealUserInfoQueryRequest;
 
 class Defaultability {
 
@@ -242,5 +243,11 @@ class Defaultability {
     **/
     public function alibabaIdleIsvLeaseOrderAdjustprice(AlibabaIdleIsvLeaseOrderAdjustpriceRequest $request,string $session) {
         return $this->client->executeWithSession("alibaba.idle.isv.lease.order.adjustprice", $request->toMap(), $request->toFileParamMap(), $session);
+    }
+    /**
+        用户三要素查询
+     **/
+    public function alibabaIdleTradeIsvRealUserInfoQuery(AlibabaIdleTradeIsvRealUserInfoQueryRequest $request,string $session) {
+        return $this->client->executeWithSession("alibaba.idle.trade.isv.real.user.info.query", $request->toMap(), $request->toFileParamMap(), $session);
     }
 }

@@ -39,6 +39,11 @@ class AlibabaIdleIsvItemPublishItemLeaseDO {
      **/
     public $open_r3f1;
 
+    /**
+        是否支持芝麻信用免押金，默认不支持
+     **/
+    public $support_zhima_deposit_free;
+
 
     public function getRentalDepositPriceInCent() : int{
         return $this->rental_deposit_price_in_cent;
@@ -94,6 +99,14 @@ class AlibabaIdleIsvItemPublishItemLeaseDO {
 
     public function setOpenR3f1(bool $openR3f1){
         $this->open_r3f1 = $openR3f1;
+    }
+
+    public function getSupportZhimaDepositFree(): bool{
+        return $this->support_zhima_deposit_free;
+    }
+
+    public function setSupportZhimaDepositFree(bool $support_zhima_deposit_free){
+        $this->support_zhima_deposit_free = $support_zhima_deposit_free;
     }
 }
 
