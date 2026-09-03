@@ -7,6 +7,5 @@
             "Topsdk\\Topapi\\": "src/"
         }
     },
-    "require": {},
-    "version": "1.1.6"
+    "require": {}
 }
