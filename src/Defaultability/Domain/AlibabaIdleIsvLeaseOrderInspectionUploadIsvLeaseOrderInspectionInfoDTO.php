@@ -28,6 +28,11 @@ class AlibabaIdleIsvLeaseOrderInspectionUploadIsvLeaseOrderInspectionInfoDTO {
      **/
     public $deduct_fee_by_over_time;
 
+    /**
+        运费，单位分
+     **/
+    public $deduct_fee_by_freight;
+
 
     public function getOrderId() : int{
         return $this->order_id;
@@ -67,6 +72,14 @@ class AlibabaIdleIsvLeaseOrderInspectionUploadIsvLeaseOrderInspectionInfoDTO {
 
     public function setDeductFeeByOverTime(int $deductFeeByOverTime){
         $this->deduct_fee_by_over_time = $deductFeeByOverTime;
+    }
+
+    public function getDeductFeeByFreight() : int{
+        return $this->deduct_fee_by_freight;
+    }
+
+    public function setDeductFeeByFreight(int $deductFeeByFreight){
+        $this->deduct_fee_by_freight = $deductFeeByFreight;
     }
 
 

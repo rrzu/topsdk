@@ -36,6 +36,7 @@ use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvLeaseSellerAddressQueryRe
 use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvLeaseSellerAddressAddRequest;
 use Topsdk\Topapi\Defaultability\Request\AlibabaIdleIsvLeaseOrderAdjustpriceRequest;
 use Topsdk\Topapi\Defaultability\Request\AlibabaIdleTradeIsvRealUserInfoQueryRequest;
+use Topsdk\Topapi\Defaultability\Request\AlibabaIdleTradeGiveUpRecoverDepositRequest;
 
 class Defaultability {
 
@@ -249,5 +250,11 @@ class Defaultability {
      **/
     public function alibabaIdleTradeIsvRealUserInfoQuery(AlibabaIdleTradeIsvRealUserInfoQueryRequest $request,string $session) {
         return $this->client->executeWithSession("alibaba.idle.trade.isv.real.user.info.query", $request->toMap(), $request->toFileParamMap(), $session);
+    }
+    /**
+        芝麻免押服务商放弃追缴接口
+     **/
+    public function alibabaIdleTradeGiveUpRecoverDeposit(AlibabaIdleTradeGiveUpRecoverDepositRequest $request,string $session) {
+        return $this->client->executeWithSession("alibaba.idle.trade.give.up.recover.deposit", $request->toMap(), $request->toFileParamMap(), $session);
     }
 }
